@@ -1,0 +1,30 @@
+{
+    "name": "axn/laravel-view-components",
+    "description": "Provide a simple but effective view components system to Laravel.",
+    "homepage": "https://github.com/AXN-Informatique/laravel-view-components",
+    "support": {
+        "issues": "https://github.com/AXN-Informatique/laravel-view-components/issues"
+    },
+    "authors": [
+		{
+            "name": "AXN Informatique",
+            "email": "developpement@axn.fr"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "5.4.*|5.5.*|5.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Axn\\ViewComponents\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Axn\\ViewComponents\\ServiceProvider"
+            ]
+        }
+    }
+}
