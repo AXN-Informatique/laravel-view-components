@@ -19,7 +19,7 @@ abstract class ViewComponent implements Htmlable, Renderable
      *
      * @param  string $class
      * @param  array  $data
-     * @return void
+     * @return static
      */
     public static function make($class, array $data = [])
     {
@@ -44,10 +44,6 @@ abstract class ViewComponent implements Htmlable, Renderable
      */
     public function &__get($key)
     {
-		if (!isset($this->data[$key])) {
-			return null;
-		}
-
         return $this->data[$key];
     }
 
