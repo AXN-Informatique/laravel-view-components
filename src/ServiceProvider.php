@@ -27,7 +27,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->app->afterResolving('blade.compiler', function(BladeCompiler $blade) {
 
             $blade->directive('render', function($expression) {
-                return "<?php echo \\".__NAMESPACE__."\ViewComponent::make($expression)->render(); ?>";
+                return "<?php echo render($expression); ?>";
             });
         });
     }

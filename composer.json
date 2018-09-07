@@ -17,8 +17,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Axn\\ViewComponents\\" : "src/"
-        }
+            "Axn\\ViewComponents\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {

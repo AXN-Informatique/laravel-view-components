@@ -65,23 +65,33 @@ class UsersSelect extends ViewComponent
 Then use the `@render` directive to render the component in a view:
 
 ```blade
-
 <div class="form-group">
     {!! Form::label('user_id', 'Select a user:') !!}
     @render(App\ViewComponents\UsersSelect::class)
 </div>
 ```
 
-If you need to pass data to the component, do it like this:
+Or the `render()` helper to render the component elsewhere than in a view:
+
+```php
+$content = render(App\ViewComponents\UsersSelect::class);
+```
+
+If you need to pass data to the component:
 
 ```blade
-
 <div class="form-group">
     {!! Form::label('user_id', 'Select a user:') !!}
     @render(App\ViewComponents\UsersSelect::class, [
         'selectedUser' => old('user_id', $currentUser->id)
     ])
 </div>
+```
+
+```php
+$content = render(App\ViewComponents\UsersSelect::class, [
+    'selectedUser' => old('user_id', $currentUser->id)
+]);
 ```
 
 And in the component:
